@@ -1,12 +1,172 @@
+:root {
+  /* declare variables */
+  /* Colours */
+
+  --light-black: hsla(257, 11%, 21%, 1);
+  --medium-black: hsla(257, 8%, 14%, 1);
+  --dark-navy: hsla(257, 27%, 26%, 1);
+  --medium-navy: hsla(257, 26%, 33%, 1);
+  --medium-grey: hsla(257, 8%, 63%, 1);
+  --light-grey: hsla(0, 0%, 75%, 1);
+  --lightest-grey: hsla(225, 32%, 95%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --turquoise: hsla(180, 66%, 49%, 1);
+
+  /* Font weights */
+  --fw-700: 700;
+  --fw-500: 500;
+
+  /* Font sizes */
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-28: 1.75rem;
+  --fs-40: 2.5rem;
+  --fs-42: 2.625rem;
+  --fs-80: 5rem;
+
+  /* Line heights */
+  --lh-23: 1.438rem;
+  --lh-24: 1.5rem;
+  --lh-26: 1.625rem;
+  --lh-27: 1.688rem;
+  --lh-28: 1.75rem;
+  --lh-30: 1.875rem;
+  --lh-33: 2.063rem;
+  --lh-48: 3rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: var(--fw-500);
+  color: var(--medium-grey);
+  /* line-height: 1.6; */
+}
+
+/* ==================
+    Typography
+===================== */
+
+h1,
+h2,
+h4,
+h4,
+.nav-link {
+  font-weight: var(--fw-700);
+}
+
+h1 {
+  font-size: var(--fs-42);
+  line-height: var(--lh-48);
+  letter-spacing: -1.05px;
+  color: var(--light-black);
+}
+
+h2 {
+  font-size: var(--fs-28);
+  line-height: var(--lh-48);
+  letter-spacing: -0.7px;
+  color: var(--light-black);
+}
+
+h3 {
+  font-size: var(--fs-22);
+  line-height: var(--lh-33);
+  color: var(--light-black);
+}
+
+h4 {
+  font-size: var(--fs-16);
+  line-height: var(--lh-24);
+  letter-spacing: -0.25px;
+  color: var(--white);
+}
+
+.nav-link {
+  font-size: var(--fs-18);
+  line-height: var(--lh-27);
+  /* color: var(--white); */
+  text-decoration: none;
+}
+
+.subtitle {
+  font-size: var(--fs-18);
+  line-height: var(--lh-30);
+  letter-spacing: 0.12px;
+}
+
+.blurb-description {
+  font-size: var(--fs-16);
+  line-height: var(--lh-28);
+  letter-spacing: 0.11px;
+}
+
+.section-description {
+  font-size: var(--fs-15);
+  line-height: var(--lh-26);
+}
+
+.get-started-title {
+  color: var(--white);
+}
+
+/* .footer-logo {
+  background-color: var(--white);
+} */
+
+.footer-link {
+  font-size: var(--fs-15);
+  line-height: var(--lh-23);
+  letter-spacing: -0.23px;
+  color: var(--light-grey);
+  text-decoration: none;
+}
+
+/* ==================
+    hero area
+===================== */
+
+.shorten-url,
+.get-started {
+  background-color: var(--dark-navy);
+}
+
+.shorten-url {
+  background-image: url(images/bg-shorten-desktop.svg);
+}
+
+.container {
+  background-color: var(--lightest-grey);
+}
+
+.col {
+  background-color: var(--white);
+  width: 80%;
+  margin-bottom: 1em;
+}
+
+.get-started {
+  background-image: url(images/bg-boost-desktop.svg);
+}
+
+.footer {
+  background: var(--medium-black);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  background-color: var(--medium-black);
+  color: var(--medium-grey);
 }
 
 .attribution a {
