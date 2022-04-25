@@ -1,5 +1,8 @@
+/* ==================
+    Variables
+===================== */
+
 :root {
-  /* declare variables */
   /* Colours */
 
   --light-black: hsla(257, 11%, 21%, 1);
@@ -11,6 +14,7 @@
   --lightest-grey: hsla(225, 32%, 95%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --turquoise: hsla(180, 66%, 49%, 1);
+  --light-turquoise: hsla(180, 56%, 75%, 1);
 
   /* Font weights */
   --fw-700: 700;
@@ -35,8 +39,13 @@
   --lh-28: 1.75rem;
   --lh-30: 1.875rem;
   --lh-33: 2.063rem;
+  --lh-36: 2.25rem;
   --lh-48: 3rem;
 }
+
+/* ==================
+    Resets
+===================== */
 
 * {
   box-sizing: border-box;
@@ -49,7 +58,7 @@ body {
   font-size: 1rem;
   font-weight: var(--fw-500);
   color: var(--medium-grey);
-  /* line-height: 1.6; */
+  text-align: center;
 }
 
 /* ==================
@@ -91,10 +100,14 @@ h4 {
   color: var(--white);
 }
 
+.logo {
+  width: 120px;
+}
+
 .nav-link {
   font-size: var(--fs-18);
   line-height: var(--lh-27);
-  /* color: var(--white); */
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -132,7 +145,95 @@ h4 {
 }
 
 /* ==================
-    hero area
+    General elements
+===================== */
+
+.btn {
+  background-color: var(--turquoise);
+  font-size: var(--fs-20);
+  font-weight: 700;
+  line-height: var(--lh-30);
+  color: var(--white);
+  padding: 0.88em 2.5em;
+  border-radius: 1.75em;
+  /* ADD transition */
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--light-turquoise);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  border-radius: 5px;
+  padding: 10px 91px;
+  font-size: var(--fs-18);
+  line-height: var(--lh-27);
+}
+
+/* ==================
+    Header area
+===================== */
+
+/* .header {
+  /* display: flex; */
+/* justify-content: space-between;
+} */
+
+.header-logo {
+  margin: 40px 24px 20px 24px;
+}
+
+.nav-list {
+  margin: 0 auto;
+  width: 327px;
+  height: 383px;
+  background-color: var(--dark-navy);
+  border-radius: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.login-nav-item {
+  border-top: 1px solid var(--medium-grey);
+  padding-top: 2em;
+}
+
+/* ==================
+    Hero area
+===================== */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-illustration {
+  order: -1;
+  width: 100%;
+}
+
+.hero-illustration img {
+  /* width: 512.48px;
+  height: auto; */
+  width: 100%;
+}
+
+.hero-info {
+  margin: 25px 24px;
+  height: auto;
+}
+
+.hero-info * {
+  margin-bottom: 40px;
+}
+
+/* ==================
+    Shorten url area
 ===================== */
 
 .shorten-url,
@@ -142,25 +243,78 @@ h4 {
 
 .shorten-url {
   background-image: url(images/bg-shorten-desktop.svg);
+  border-radius: 10px;
+  margin: 2rem 1.5rem;
+  padding: 1.5rem;
 }
 
-.container {
+.link-input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 6px 90px 6px 16px;
+  font-size: var(--fs-16);
+  line-height: var(--lh-36);
+  letter-spacing: 0.12px;
+  margin-bottom: 1rem;
+}
+
+/* ==================
+    Blurb area
+===================== */
+
+.container-blurb {
   background-color: var(--lightest-grey);
 }
+
+.blurb {
+  padding: 3rem 1.5rem;
+}
+
+.blurb-title {
+  padding-bottom: 1.5rem;
+}
+
+/* ==================
+    info area
+===================== */
 
 .col {
   background-color: var(--white);
   width: 80%;
-  margin-bottom: 1em;
+  margin: 0 auto 1.5em auto;
+  padding: 2em 1.5em;
 }
+
+.icon {
+  background-color: var(--dark-navy);
+  border-radius: 100%;
+}
+
+/* ==================
+    get started area
+===================== */
 
 .get-started {
   background-image: url(images/bg-boost-desktop.svg);
+  padding: 4em 2em;
 }
+
+.get-started-title {
+  margin-bottom: 1em;
+}
+
+/* ==================
+    footer area
+===================== */
 
 .footer {
   background: var(--medium-black);
 }
+
+/* ==================
+    attribution area
+===================== */
 
 .attribution {
   font-size: 11px;

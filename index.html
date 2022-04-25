@@ -23,43 +23,46 @@
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   </head>
   <body>
+    <!-- Header area
     <header class="header">
-      <div class="header-content">
+      <div class="header-logo">
         <a class="logo-link" href="index.html">
           <img src="images/logo.svg" alt="" class="logo" />
         </a>
+      </div> -->
 
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Features</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Resources</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Login</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link btn btn-primary">Sign Up</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- Nav bar
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item login-nav-item">
+            <a href="#" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link btn btn-primary">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header> -->
 
     <main>
+      <!-- Hero area -->
       <section class="hero">
         <div class="hero-info">
           <h1 class="hero-title">More than just shorter links</h1>
-          <p class="subtitle">
+          <p class="hero-subtitle">
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>
-          <a class="btn btn-primary">Get Started</a>
+          <a class="btn btn-primary btn-hero">Get Started</a>
         </div>
         <div class="hero-illustration">
           <img
@@ -69,19 +72,22 @@
         </div>
       </section>
 
+      <!-- Shorten url area -->
       <section class="shorten-url">
         <form action="#">
           <input
+            class="link-input"
             type="text"
             required
             aria-label="Shorten a link here"
             placeholder="Shorten a link here..."
           />
-          <button class="btn btn-primary" type="submit">Shorten It!</button>
+          <button class="btn btn-secondary" type="submit">Shorten It!</button>
         </form>
       </section>
 
-      <div class="container">
+      <!-- Blurb area -->
+      <div class="container-blurb">
         <section class="blurb">
           <h2 class="blurb-title">Advanced Statistics</h2>
           <p class="blurb-description">
@@ -90,6 +96,7 @@
           </p>
         </section>
 
+        <!-- Info area -->
         <section class="info">
           <div class="col">
             <img src="images/icon-brand-recognition.svg" alt="" class="icon" />
@@ -120,17 +127,19 @@
         </section>
       </div>
 
+      <!-- Get started area -->
       <section class="get-started">
         <h2 class="get-started-title">Boost your links today</h2>
         <a class="btn btn-primary">Get Started</a>
       </section>
     </main>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <!-- Company logo -->
         <a class="logo-link" href="index.html">
-          <img src="images/logo.svg" alt="" class="logo" />
+          <img class="footer-logo" src="images/logo.svg" alt="" class="logo" />
         </a>
         <!-- Footer links -->
         <div class="footer-links">
@@ -202,6 +211,8 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Attribution area -->
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
