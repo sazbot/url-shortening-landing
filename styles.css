@@ -222,6 +222,45 @@ h4 {
   padding-bottom: 0.4em;
 }
 
+@media (min-width: 650px) {
+  .open-nav {
+    display: none;
+  }
+
+  .nav {
+    position: initial;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding-bottom: 0.5em;
+    background-color: var(--white);
+  }
+
+  .nav-item {
+    padding-right: 1em;
+  }
+
+  .login-nav-item {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .nav-link {
+    font-size: var(--fs-15);
+    line-height: 22.5px;
+    color: var(--medium-grey);
+  }
+
+  .nav-link.btn {
+    color: var(--white);
+  }
+}
+
 /* ==================
     Hero area
 ===================== */
@@ -251,6 +290,17 @@ h4 {
 
 .hero-info * {
   margin-bottom: 40px;
+}
+
+@media (min-width: 650px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-illustration {
+    order: 1;
+  }
 }
 
 /* ==================
