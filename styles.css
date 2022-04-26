@@ -201,6 +201,7 @@ h4 {
   right: 1.5em;
   top: 6em;
   left: 100%;
+  z-index: 3;
 }
 
 .navigation-open {
