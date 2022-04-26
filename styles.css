@@ -176,13 +176,12 @@ h4 {
     Header area
 ===================== */
 
-/* .header {
-  /* display: flex; */
-/* justify-content: space-between;
-} */
-
-.header-logo {
-  margin: 40px 24px 20px 24px;
+.header {
+  padding: 2em 1.5em 1em 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .nav-list {
@@ -197,9 +196,29 @@ h4 {
   justify-content: space-evenly;
 }
 
+.nav {
+  position: fixed;
+  right: 1.5em;
+  top: 6em;
+  left: 100%;
+}
+
+.navigation-open {
+  left: 1.5em;
+}
+
 .login-nav-item {
   border-top: 1px solid var(--medium-grey);
   padding-top: 2em;
+}
+
+.open-nav {
+  border: 0;
+  background: 0;
+  color: var(--medium-grey);
+  cursor: pointer;
+  font-size: 2em;
+  padding-bottom: 0.4em;
 }
 
 /* ==================
@@ -302,9 +321,13 @@ h4 {
   border-radius: 5px;
   width: 80%;
   margin: 0 auto 6em auto;
-  padding: 5em 1.5em 2em 1.5em;
+  padding: 4.5em 1.5em 2em 1.5em;
   z-index: 1;
   position: absolute;
+}
+
+.section-title {
+  margin-bottom: 0.7em;
 }
 
 .icon-container {
