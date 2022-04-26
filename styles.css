@@ -219,7 +219,8 @@ h4 {
 
 .hero-illustration img {
   /* width: 512.48px;
-  height: auto; */
+  height: auto;
+  overflow-x: hidden; */
   width: 100%;
 }
 
@@ -279,16 +280,71 @@ h4 {
     info area
 ===================== */
 
-.col {
+.section-info {
+  height: 1100px;
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.line {
+  height: 900px;
+  border-right: 8px solid var(--turquoise);
+  position: absolute;
+  top: 0;
+}
+
+.info {
   background-color: var(--white);
+  border-radius: 5px;
   width: 80%;
-  margin: 0 auto 1.5em auto;
-  padding: 2em 1.5em;
+  margin: 0 auto 6em auto;
+  padding: 5em 1.5em 2em 1.5em;
+  z-index: 1;
+  position: absolute;
+}
+
+.icon-container {
+  background-color: var(--dark-navy);
+  border-radius: 100%;
+  width: 88px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
 }
 
 .icon {
-  background-color: var(--dark-navy);
-  border-radius: 100%;
+  width: 50%;
+}
+
+.icon-br {
+  top: 0;
+}
+
+.info-br {
+  top: 3em;
+}
+
+.icon-dr {
+  top: 22em;
+}
+
+.info-dr {
+  top: 25em;
+}
+
+.icon-fc {
+  top: 44em;
+}
+
+.info-fc {
+  top: 47em;
 }
 
 /* ==================
