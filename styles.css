@@ -166,6 +166,7 @@ h4 {
 }
 
 .btn-secondary {
+  border: none;
   border-radius: 5px;
   padding: 10px 91px;
   font-size: var(--fs-18);
@@ -269,6 +270,7 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 8em;
 }
 
 .hero-illustration {
@@ -307,6 +309,11 @@ h4 {
     Shorten url area
 ===================== */
 
+.section-shorten-url {
+  border: 1px solid var(--lightest-grey);
+  background-color: var(--lightest-grey);
+}
+
 .shorten-url,
 .get-started {
   background-color: var(--dark-navy);
@@ -315,8 +322,9 @@ h4 {
 .shorten-url {
   background-image: url(images/bg-shorten-desktop.svg);
   border-radius: 10px;
-  margin: 2rem 1.5rem;
   padding: 1.5rem;
+  margin: 2rem 1.5rem;
+  margin-top: -5em;
 }
 
 .link-input {
@@ -328,6 +336,29 @@ h4 {
   line-height: var(--lh-36);
   letter-spacing: 0.12px;
   margin-bottom: 1rem;
+}
+
+.copy-link {
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 1.5rem 0;
+  margin: 2rem auto;
+  width: 86%;
+}
+
+.url-original {
+  color: var(--light-black);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--lightest-grey);
+}
+
+.url-short {
+  color: var(--turquoise);
+  padding: 1rem 0;
+}
+
+.btn-copy {
+  padding: 7px 100px;
 }
 
 /* ==================
