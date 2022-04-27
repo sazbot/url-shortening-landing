@@ -476,7 +476,7 @@ h4 {
 }
 
 /* ==================
-    info area
+    Info area
 ===================== */
 
 .section-info {
@@ -549,6 +549,54 @@ h4 {
 
 .info-fc {
   top: 47em;
+}
+
+@media (min-width: 1150px) {
+  .section-info,
+  .info,
+  .icon {
+    position: initial;
+  }
+
+  .section-info {
+    height: auto;
+    width: var(--max-width-lg);
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    padding: 2em 0 4em 0;
+  }
+
+  .line {
+    height: 0;
+    width: 900px;
+    border-bottom: 8px solid var(--turquoise);
+    position: absolute;
+    top: 45%;
+  }
+
+  .info-dr {
+    transform: translateY(40px);
+  }
+
+  .info-fc {
+    transform: translateY(80px);
+  }
+
+  .icon-br {
+    top: -0.7em;
+    left: 9em;
+  }
+
+  .icon-dr {
+    top: 1.7em;
+  }
+
+  .icon-fc {
+    top: 4.2em;
+    right: 9em;
+  }
 }
 
 /* ==================
