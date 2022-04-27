@@ -239,6 +239,11 @@ h4 {
 }
 
 @media (min-width: 650px) {
+  .header {
+    max-width: var(--max-width-lg);
+    margin: 0 auto;
+    padding: 2em 0 1em 1em;
+  }
   .open-nav {
     display: none;
   }
