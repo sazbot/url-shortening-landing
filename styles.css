@@ -436,12 +436,24 @@ h4 {
     /* display: none; */
   }
 
-  .btn-shorten {
+  .btn-shorten,
+  .btn-copy {
     padding: initial;
     padding: 0 20px;
     height: 47px;
     width: 20%;
     min-width: 130px;
+  }
+
+  .btn-copy {
+    margin: 1em;
+  }
+
+  .url-original,
+  .url-short {
+    padding: initial;
+    padding-left: 1em;
+    border-bottom: none;
   }
 }
 
@@ -601,6 +613,33 @@ h4 {
 .social-link:focus {
   filter: invert(25%) sepia(100%) saturate(1700%) hue-rotate(120deg)
     brightness(90%) contrast(50%);
+}
+
+@media (min-width: 650px) {
+  .footer-content,
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    padding-left: 0;
+    padding-right: 1em;
+  }
+
+  .footer-links {
+    text-align: left;
+  }
+
+  .footer-link-item {
+    padding-left: 0;
+    padding-right: 3em;
+  }
+
+  .social-item {
+    padding: 0 0.5em;
+  }
 }
 
 /* ==================
