@@ -13,7 +13,7 @@
   --light-grey: hsla(0, 0%, 75%, 1);
   --lightest-grey: hsla(225, 32%, 95%, 1);
   --white: hsla(0, 0%, 100%, 1);
-  --turquoise: hsla(180, 66%, 49%, 1);
+  --turquoise: hsl(180, 66%, 49%);
   --light-turquoise: hsla(180, 56%, 75%, 1);
   --red: hsla(0, 86%, 67%, 1);
 
@@ -49,7 +49,9 @@
     Resets
 ===================== */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -134,10 +136,6 @@ h4 {
   color: var(--white);
 }
 
-/* .footer-logo {
-  background-color: var(--white);
-} */
-
 .footer-link {
   font-size: var(--fs-15);
   line-height: var(--lh-23);
@@ -187,6 +185,14 @@ h4 {
   position: relative;
 }
 
+.nav {
+  position: fixed;
+  right: 1.5em;
+  top: 6em;
+  left: 100%;
+  z-index: 3;
+}
+
 .nav-list {
   margin: 0 auto;
   width: 327px;
@@ -197,14 +203,6 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-
-.nav {
-  position: fixed;
-  right: 1.5em;
-  top: 6em;
-  left: 100%;
-  z-index: 3;
 }
 
 .navigation-open {
@@ -346,14 +344,18 @@ h4 {
 }
 
 .link-input {
-  border: none;
-  outline: none;
   border-radius: 5px;
   padding: 6px 90px 6px 16px;
   font-size: var(--fs-16);
   line-height: var(--lh-36);
   letter-spacing: 0.12px;
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.link-input:focus {
+  border: 2px solid var(--red);
+  outline: none;
 }
 
 .error-message {
@@ -530,6 +532,11 @@ h4 {
   padding: 0.5em;
 }
 
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--turquoise);
+}
+
 .social-list {
   display: flex;
   justify-content: center;
@@ -539,6 +546,12 @@ h4 {
 
 .social-item {
   padding: 1em;
+}
+
+.social-link:hover,
+.social-link:focus {
+  filter: invert(25%) sepia(100%) saturate(1700%) hue-rotate(120deg)
+    brightness(90%) contrast(50%);
 }
 
 /* ==================
