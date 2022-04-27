@@ -43,6 +43,11 @@
   --lh-33: 2.063rem;
   --lh-36: 2.25rem;
   --lh-48: 3rem;
+
+  /* Widths */
+  --min-width: 330px;
+  --max-width-sm: 350px;
+  --max-width-lg: 1110px;
 }
 
 /* ==================
@@ -290,19 +295,18 @@ h4 {
 
 .hero-illustration {
   order: -1;
-  width: 100%;
+  max-width: var(--max-width-sm);
+  margin: 0 auto;
 }
 
 .hero-illustration img {
-  /* width: 512.48px;
-  height: auto;
-  overflow-x: hidden; */
   width: 100%;
 }
 
 .hero-info {
-  margin: 25px 24px;
+  margin: 25px auto;
   height: auto;
+  max-width: var(--max-width-sm);
 }
 
 .hero-info * {
@@ -327,6 +331,7 @@ h4 {
 .section-shorten-url {
   border: 1px solid var(--lightest-grey);
   background-color: var(--lightest-grey);
+  width: 100%;
 }
 
 .shorten-url,
@@ -338,9 +343,10 @@ h4 {
   background-image: url(images/bg-shorten-desktop.svg);
   border-radius: 10px;
   height: auto;
+  max-width: var(--max-width-sm);
+  min-width: var(--min-width);
   padding: 1.5rem;
-  margin: 2rem 1.5rem;
-  margin-top: -5em;
+  margin: -5rem auto 2rem auto;
 }
 
 .link-input {
@@ -353,7 +359,8 @@ h4 {
   cursor: pointer;
 }
 
-.link-input:focus {
+.link-input:focus,
+.link-input:hover {
   border: 2px solid var(--red);
   outline: none;
 }
@@ -363,7 +370,7 @@ h4 {
   text-align: left;
   color: var(--red);
   letter-spacing: 0.08px;
-  margin: -0.6rem 0 0.5rem 0.2rem;
+  margin: -0.7rem 0 0.8rem 1rem;
   /* display: none; */
 }
 
@@ -376,7 +383,7 @@ h4 {
   border-radius: 5px;
   padding: 1.5rem 0;
   margin: 2rem auto;
-  width: 86%;
+  max-width: var(--max-width-sm);
   /* display: none; */
 }
 
@@ -399,6 +406,15 @@ h4 {
   padding: 7px 100px;
 }
 
+@media (min-width: 650px) {
+  .shorten-url,
+  .copy-link {
+    display: flex;
+    width: 85%;
+    max-width: var(--max-width-lg);
+  }
+}
+
 /* ==================
     Blurb area
 ===================== */
@@ -409,6 +425,8 @@ h4 {
 
 .blurb {
   padding: 3rem 1.5rem;
+  max-width: var(--max-width-sm);
+  margin: 0 auto;
 }
 
 .blurb-title {
@@ -439,7 +457,8 @@ h4 {
 .info {
   background-color: var(--white);
   border-radius: 5px;
-  width: 80%;
+  max-width: var(--max-width-sm);
+  min-width: var(--min-width);
   margin: 0 auto 6em auto;
   padding: 4.5em 1.5em 2em 1.5em;
   z-index: 1;
