@@ -31,6 +31,7 @@
   --fs-28: 1.75rem;
   --fs-40: 2.5rem;
   --fs-42: 2.625rem;
+  --fs-60: 3.75rem;
   --fs-80: 5rem;
 
   /* Line heights */
@@ -44,6 +45,7 @@
   --lh-33: 2.063rem;
   --lh-36: 2.25rem;
   --lh-48: 3rem;
+  --lh-70: 4.375rem;
   --lh-90: 5.625rem;
 
   /* Widths */
@@ -167,9 +169,9 @@ h4 {
 
 @media (min-width: 650px) {
   h1 {
-    font-size: var(--fs-80);
-    line-height: var(--lh-90);
-    letter-spacing: -2px;
+    font-size: var(--fs-60);
+    line-height: var(--lh-70);
+    letter-spacing: -1.5px;
   }
 
   h2 {
@@ -178,9 +180,9 @@ h4 {
   }
 
   .hero-subtitle {
-    font-size: var(--fs-22);
-    line-height: var(--lh-36);
-    letter-spacing: 0.15px;
+    font-size: var(--fs-20);
+    line-height: var(--lh-33);
+    letter-spacing: 0.13px;
   }
 
   .link-input::placeholder {
@@ -208,6 +210,20 @@ h4 {
     font-size: var(--fs-18);
     line-height: var(--lh-32);
     letter-spacing: 0.12px;
+  }
+}
+
+@media (min-width: 1300px) {
+  h1 {
+    font-size: var(--fs-80);
+    line-height: var(--lh-90);
+    letter-spacing: -2px;
+  }
+
+  .hero-subtitle {
+    font-size: var(--fs-22);
+    line-height: var(--lh-36);
+    letter-spacing: 0.15px;
   }
 }
 
@@ -245,7 +261,9 @@ h4 {
 ===================== */
 
 .header {
-  padding: 2em 1.5em 1em 1.5em;
+  padding: 2em 0;
+  width: 85%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -300,11 +318,11 @@ h4 {
   padding-bottom: 0.4em;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .header {
     max-width: var(--max-width-lg);
     margin: 0 auto;
-    padding: 2em 0 1em 1em;
+    /* padding: 2em 0 1em 1em; */
   }
   .open-nav {
     display: none;
@@ -381,13 +399,35 @@ h4 {
 }
 
 @media (min-width: 650px) {
+  .hero-illustration {
+    max-width: 70%;
+    padding-bottom: 1em;
+    padding-left: 2em;
+  }
+}
+
+@media (min-width: 900px) {
   .hero {
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    width: 85%;
+    margin: 0 auto;
   }
 
   .hero-illustration {
     order: 1;
+  }
+
+  .hero-info {
+    max-width: calc(var(--max-width-lg) / 2);
+    text-align: left;
+  }
+}
+
+@media (min-width: 1300px) {
+  .hero {
+    max-width: var(--max-width-lg);
   }
 }
 
@@ -408,18 +448,19 @@ h4 {
 
 .shorten-url {
   background-image: url(images/bg-shorten-desktop.svg);
-  border-radius: 10px;
+  border-radius: 0.63em;
   height: auto;
   max-width: var(--max-width-sm);
-  min-width: var(--min-width);
-  padding: 1.5rem;
-  margin: -5rem auto 2rem auto;
+  padding: 1.5em;
+  margin: -5em auto 2em auto;
   position: relative;
 }
 
 .link-input {
-  border-radius: 5px;
-  padding: 6px 90px 6px 16px;
+  border-radius: 0.3em;
+  padding: 0.4em 0 0.4em 0.8em;
+  width: 95%;
+  font-family: inherit;
   font-size: var(--fs-16);
   line-height: var(--lh-36);
   letter-spacing: 0.12px;
@@ -443,6 +484,9 @@ h4 {
 
 .btn-shorten {
   margin-top: 1rem;
+  padding: 0 20px;
+  height: 47px;
+  width: 95%;
 }
 
 .copy-link {
@@ -589,7 +633,6 @@ h4 {
   background-color: var(--white);
   border-radius: 5px;
   max-width: var(--max-width-sm);
-  min-width: var(--min-width);
   margin: 0 auto 6em auto;
   padding: 4.5em 1.5em 2em 1.5em;
   z-index: 1;
@@ -694,7 +737,7 @@ h4 {
 
 .get-started {
   background-image: url(images/bg-boost-desktop.svg);
-  padding: 4em 2em;
+  padding: 4em 1em;
 }
 
 .get-started-title {
@@ -708,6 +751,11 @@ h4 {
 .footer {
   background: var(--medium-black);
   padding: 2em;
+}
+
+.footer-content {
+  margin: 0 auto;
+  max-width: var(--max-width-lg);
 }
 
 .footer-logo {
@@ -752,17 +800,17 @@ h4 {
     brightness(90%) contrast(50%);
 }
 
-@media (min-width: 650px) {
+@media (min-width: 900px) {
   .footer-content,
   .footer-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
   .footer-logo {
     padding-left: 0;
-    padding-right: 1em;
+    padding-right: 2em;
   }
 
   .footer-links {
@@ -788,7 +836,7 @@ h4 {
   text-align: center;
   background-color: var(--medium-black);
   color: var(--medium-grey);
-  padding-bottom: 1.5em;
+  padding: 2em;
 }
 
 .attribution a {
