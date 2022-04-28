@@ -414,17 +414,13 @@ h4 {
 }
 
 @media (min-width: 650px) {
-  .shorten-url,
-  .copy-link {
+  .shorten-url {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 85%;
     max-width: var(--max-width-lg);
     position: relative;
-  }
-
-  .shorten-url {
     padding-bottom: 2em;
   }
 
@@ -439,6 +435,18 @@ h4 {
     top: 6.6em;
     left: 2.4em;
     /* display: none; */
+  }
+
+  .copy-link {
+    width: 85%;
+    max-width: var(--max-width-lg);
+    padding-bottom: 0;
+  }
+
+  .container-copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .btn-shorten,
@@ -456,9 +464,9 @@ h4 {
 
   .url-original,
   .url-short {
-    padding: initial;
+    /* padding: initial; */
     padding-left: 1em;
-    border-bottom: none;
+    text-align: left;
   }
 }
 
