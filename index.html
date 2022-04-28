@@ -79,13 +79,15 @@
       <section class="section-shorten-url">
         <!-- URL input form -->
         <form class="shorten-url" action="#">
-          <input
-            class="link-input"
-            type="text"
-            aria-label="Shorten a link here"
-            placeholder="Shorten a link here..."
-          />
-          <p class="error-message">Please add a link</p>
+          <div class="container-error">
+            <input
+              class="link-input"
+              type="text"
+              aria-label="Shorten a link here"
+              placeholder="Shorten a link here..."
+            />
+            <p class="error-message">Please add a link</p>
+          </div>
 
           <button class="btn btn-secondary btn-shorten" type="submit">
             Shorten It!
