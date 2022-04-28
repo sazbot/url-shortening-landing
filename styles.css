@@ -134,7 +134,8 @@ h4 {
   font-size: var(--fs-16);
   line-height: var(--lh-36);
   letter-spacing: 0.12px;
-  color: var(--red);
+  color: var(--medium-grey);
+  /* color: var(--red); */
 }
 
 .error-message {
@@ -185,11 +186,6 @@ h4 {
     letter-spacing: 0.13px;
   }
 
-  .link-input::placeholder {
-    font-size: var(--fs-20);
-    letter-spacing: 0.15px;
-  }
-
   .error-message {
     font-size: var(--fs-16);
     letter-spacing: 0.11px;
@@ -223,6 +219,11 @@ h4 {
   .hero-subtitle {
     font-size: var(--fs-22);
     line-height: var(--lh-36);
+    letter-spacing: 0.15px;
+  }
+
+  .link-input::placeholder {
+    font-size: var(--fs-20);
     letter-spacing: 0.15px;
   }
 }
@@ -475,7 +476,9 @@ h4 {
 
 .error-message {
   margin: 0.2em 0 0 1.2em;
-  /* display: none; */
+  position: absolute;
+  z-index: 2;
+  display: none;
 }
 
 .display-error {
@@ -483,7 +486,7 @@ h4 {
 }
 
 .btn-shorten {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   padding: 0 20px;
   height: 47px;
   width: 95%;
@@ -495,7 +498,7 @@ h4 {
   padding: 1.5rem 0;
   margin: 2rem auto;
   max-width: var(--max-width-sm);
-  /* display: none; */
+  display: none;
 }
 
 .display-copy-link {
@@ -526,7 +529,7 @@ h4 {
     max-width: var(--max-width-lg);
     position: relative;
     padding-top: 2.5em;
-    padding-bottom: 1.5em;
+    padding-bottom: 2.5em;
   }
 
   .link-input {
@@ -545,6 +548,7 @@ h4 {
 
   .error-message {
     margin: 0.2rem 0 0 0.2rem;
+    bottom: 0.9em;
     /* display: none; */
   }
 
