@@ -6,7 +6,7 @@
   /* Colours */
 
   --light-black: hsla(257, 11%, 21%, 1);
-  --medium-black: hsla(257, 8%, 14%, 1);
+  --medium-black: hsl(250, 8%, 14%);
   --dark-navy: hsla(257, 27%, 26%, 1);
   --medium-navy: hsla(257, 26%, 33%, 1);
   --medium-grey: hsla(257, 8%, 63%, 1);
