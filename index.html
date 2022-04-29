@@ -30,10 +30,12 @@
           <img src="images/logo.svg" alt="" class="logo" />
         </a>
       </div>
-      <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+      <button aria-label="Open navigation" class="open-nav" data-open-nav>
+        &#9776;
+      </button>
 
       <!-- Nav bar -->
-      <nav class="nav">
+      <nav class="nav" data-nav>
         <ul class="nav-list">
           <li class="nav-item">
             <a href="#" class="nav-link">Features</a>
@@ -78,15 +80,18 @@
       <!-- Shorten url area -->
       <section class="section-shorten-url">
         <!-- URL input form -->
-        <form class="shorten-url" action="#">
+        <form class="shorten-url" data-shorten-url action="#">
           <div class="container-error">
             <input
               class="link-input"
+              data-link-input
               type="text"
               aria-label="Shorten a link here"
               placeholder="Shorten a link here..."
             />
-            <p class="error-message">Please add a link</p>
+            <p class="error-message" data-error-message>
+              Please provide a valid url
+            </p>
           </div>
 
           <button class="btn btn-secondary btn-shorten" type="submit">
@@ -99,7 +104,11 @@
           <p class="url-original">https://www.frontendmentor.io</p>
           <div class="container-copy">
             <p class="url-short">https://rel.ink/k4lKyk</p>
-            <button class="btn btn-secondary btn-copy" type="submit">
+            <button
+              class="btn btn-secondary btn-copy"
+              data-btn-shorten
+              type="submit"
+            >
               Copy
             </button>
           </div>
