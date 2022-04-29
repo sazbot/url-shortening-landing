@@ -3,17 +3,22 @@ const nav = document.querySelector("[data-nav]");
 const shortenURLForm = document.querySelector("[data-shorten-url]");
 const formInput = document.querySelector("[data-link-input]");
 const errorMessage = document.querySelector("[data-error-message]");
-const copyButton = document.querySelector("[data-btn-copy]");
 const template = document.querySelector("#short-link-template");
 const shortenURLSection = document.querySelector("[data-section-shorten-url]");
 let baseURL = "https://api.shrtco.de/v2/shorten?url=";
+const SESSION_STORAGE_PREFIX = "URL_SHORTENING_LANDING";
+const LINKS_STORAGE_KEY = `${SESSION_STORAGE_PREFIX}-links`;
+
+// render links saved in session storage
+const links = loadLinks();
+links.forEach((link) => renderLink(link.originalURL, link.shortURL));
 
 // add toggle functionality to nav bar
 openButton.addEventListener("click", () => {
   nav.classList.toggle("navigation-open");
 });
 
-// add functionlity to shorten URL button
+// add functionlity to shorten URL form
 shortenURLForm.addEventListener("submit", () => {
   const inputValue = formInput.value;
   const isValidURL = validateInput(inputValue);
@@ -21,15 +26,19 @@ shortenURLForm.addEventListener("submit", () => {
   if (!isValidURL) return;
   const fetchURL = baseURL + inputValue;
 
-  fetchAPI(fetchURL).then((data) =>
-    renderLink(inputValue, data.result.short_link)
-  );
+  fetchAPI(fetchURL).then((data) => {
+    renderLink(inputValue, data.result.short_link);
+    saveLinks();
+  });
 
   resetForm();
 });
 
 // clear error messages
 clearError();
+
+// add event listener to copy button
+// select closest short URL and copy to clipboard
 
 // Function definitions
 
@@ -76,6 +85,7 @@ function renderLink(originalURL, shortURL) {
   originalURLElement.innerText = originalURL;
   shortURLElement.innerText = shortURL;
 
+  links.push({ originalURL: originalURL, shortURL: shortURL });
   shortenURLSection.appendChild(renderLinkDiv);
 }
 
@@ -84,6 +94,11 @@ function resetForm() {
   formInput.placeholder = "Shorten a link here..";
 }
 
-// save original and short URLs in local storage and render on refresh
-// add event listener to copy button
-// select closest short URL and copy to clipboard
+function loadLinks() {
+  const linksString = sessionStorage.getItem(LINKS_STORAGE_KEY);
+  return JSON.parse(linksString) || [];
+}
+
+function saveLinks() {
+  sessionStorage.setItem(LINKS_STORAGE_KEY, JSON.stringify(links));
+}
