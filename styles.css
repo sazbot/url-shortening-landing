@@ -383,10 +383,14 @@ h4 {
   order: -1;
   max-width: var(--max-width-sm);
   margin: 0 auto;
+  /* align-self: flex-end;
+  overflow: hidden; */
 }
 
 .hero-illustration img {
   width: 100%;
+  /* width: 140%;
+  padding-left: 1em; */
 }
 
 .hero-info {
@@ -470,7 +474,8 @@ h4 {
 
 .link-input:focus,
 .link-input:hover {
-  border: 2px solid var(--red);
+  /* border: 2px solid var(--red); */
+  border: 2px solid var(--light-turquoise);
   outline: none;
 }
 
