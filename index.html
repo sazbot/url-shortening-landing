@@ -78,7 +78,7 @@
       </section>
 
       <!-- Shorten url area -->
-      <section class="section-shorten-url">
+      <section class="section-shorten-url" data-section-shorten-url>
         <!-- URL input form -->
         <form class="shorten-url" data-shorten-url action="#">
           <div class="container-error">
@@ -98,21 +98,6 @@
             Shorten It!
           </button>
         </form>
-
-        <!-- Copy to clipboard -->
-        <div class="copy-link">
-          <p class="url-original">https://www.frontendmentor.io</p>
-          <div class="container-copy">
-            <p class="url-short">https://rel.ink/k4lKyk</p>
-            <button
-              class="btn btn-secondary btn-copy"
-              data-btn-shorten
-              type="submit"
-            >
-              Copy
-            </button>
-          </div>
-        </div>
       </section>
 
       <!-- Blurb area -->
@@ -257,5 +242,22 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Sarah Fielding Smith</a>.
     </div>
+
+    <!-- Short link template -->
+    <template id="short-link-template">
+      <div class="copy-link" data-copy-link>
+        <p class="url-original" data-url-original></p>
+        <div class="container-copy">
+          <p class="url-short" data-url-short></p>
+          <button
+            class="btn btn-secondary btn-copy"
+            data-btn-shorten
+            type="submit"
+          >
+            Copy
+          </button>
+        </div>
+      </div>
+    </template>
   </body>
 </html>

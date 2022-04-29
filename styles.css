@@ -503,11 +503,6 @@ h4 {
   padding: 1.5rem 0;
   margin: 2rem auto;
   max-width: var(--max-width-sm);
-  display: none;
-}
-
-.display-copy-link {
-  display: block;
 }
 
 .url-original {

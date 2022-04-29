@@ -4,6 +4,8 @@ const shortenURLForm = document.querySelector("[data-shorten-url]");
 const formInput = document.querySelector("[data-link-input]");
 const errorMessage = document.querySelector("[data-error-message]");
 const copyButton = document.querySelector("[data-btn-copy]");
+const template = document.querySelector("#short-link-template");
+const shortenURLSection = document.querySelector("[data-section-shorten-url]");
 let baseURL = "https://api.shrtco.de/v2/shorten?url=";
 
 // add toggle functionality to nav bar
@@ -11,15 +13,21 @@ openButton.addEventListener("click", () => {
   nav.classList.toggle("navigation-open");
 });
 
-// clear error messages
-clearError();
-
 // add functionlity to shorten URL button
 shortenURLForm.addEventListener("submit", () => {
   const inputValue = formInput.value;
   const isValidURL = validateInput(inputValue);
-  console.log(isValidURL);
+
+  if (!isValidURL) return;
+  const fetchURL = baseURL + inputValue;
+
+  fetchAPI(fetchURL).then((data) =>
+    renderLink(inputValue, data.result.short_link)
+  );
 });
+
+// clear error messages
+clearError();
 
 // Function definitions
 
@@ -45,11 +53,30 @@ function clearError() {
   });
 }
 
-// add to API base URL
-// set up async await request (w. error handling)
-// limit request rate to 1/sec
-// extract short URL from JSON data
-// [consider create html template] append original and short URL to .copy-link (& add .display-copy-link)
+async function fetchAPI(url) {
+  try {
+    const res = await fetch(url);
+    console.log(res.ok, res.status);
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+function renderLink(originalURL, shortURL) {
+  const templateClone = template.content.cloneNode(true);
+
+  const renderLinkDiv = templateClone.querySelector("[data-copy-link]");
+  const originalURLElement = templateClone.querySelector("[data-url-original]");
+  const shortURLElement = templateClone.querySelector("[data-url-short]");
+
+  originalURLElement.innerText = originalURL;
+  shortURLElement.innerText = shortURL;
+
+  shortenURLSection.appendChild(renderLinkDiv);
+}
+
 // save original and short URLs in local storage and render on refresh
 // add event listener to copy button
 // select closest short URL and copy to clipboard
