@@ -24,6 +24,8 @@ shortenURLForm.addEventListener("submit", () => {
   fetchAPI(fetchURL).then((data) =>
     renderLink(inputValue, data.result.short_link)
   );
+
+  resetForm();
 });
 
 // clear error messages
@@ -75,6 +77,11 @@ function renderLink(originalURL, shortURL) {
   shortURLElement.innerText = shortURL;
 
   shortenURLSection.appendChild(renderLinkDiv);
+}
+
+function resetForm() {
+  formInput.value = "";
+  formInput.placeholder = "Shorten a link here..";
 }
 
 // save original and short URLs in local storage and render on refresh
