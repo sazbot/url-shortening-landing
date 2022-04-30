@@ -9,17 +9,18 @@ let baseURL = "https://api.shrtco.de/v2/shorten?url=";
 const SESSION_STORAGE_PREFIX = "URL_SHORTENING_LANDING";
 const LINKS_STORAGE_KEY = `${SESSION_STORAGE_PREFIX}-links`;
 
-// render links saved in session storage
-const links = loadLinks();
-links.forEach((link) => renderLink(link.originalURL, link.shortURL));
-
 // add toggle functionality to nav bar
 openButton.addEventListener("click", () => {
   nav.classList.toggle("navigation-open");
 });
 
+// render links saved in session storage
+const links = loadLinks();
+links.forEach((link) => renderLink(link.originalURL, link.shortURL));
+
 // add functionality to shorten URL form
-shortenURLForm.addEventListener("submit", () => {
+shortenURLForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   const inputValue = formInput.value;
   const isValidURL = validateInput(inputValue);
 
@@ -29,9 +30,8 @@ shortenURLForm.addEventListener("submit", () => {
   fetchAPI(fetchURL).then((data) => {
     renderLink(inputValue, data.result.short_link);
     saveLinks();
+    resetForm();
   });
-
-  resetForm();
 });
 
 // clear error messages
@@ -41,9 +41,11 @@ clearError();
 shortenURLSection.addEventListener("click", (e) => {
   if (!e.target.matches("[data-btn-copy]")) return;
 
+  // copy short url to clipboard
   const targetURL = e.target.previousElementSibling.innerText;
   copyURL(targetURL);
 
+  // update copy button styling
   const targetButton = e.target;
   targetButton.style.backgroundColor = "#222127";
   targetButton.innerText = "Copied";
@@ -69,6 +71,7 @@ function displayError() {
 function clearError() {
   formInput.addEventListener("click", () => {
     errorMessage.classList.remove("display-error");
+    resetForm();
   });
 }
 
