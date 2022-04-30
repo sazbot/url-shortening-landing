@@ -1,4 +1,10 @@
-# Frontend Mentor - Shortly URL shortening API Challenge solution
+# Shortly URL shorter
+
+Shorten any url using the Shortly URL shortening API site
+
+![Preview for the Shortly URL shortening API site](./images/shortly-image.png)
+
+## Frontend Mentor - Shortly URL shortening API Challenge solution
 
 This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -6,7 +12,6 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -27,10 +32,6 @@ Users should be able to:
 - Copy the shortened link to their clipboard in a single click
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
-
-### Screenshot
-
-![Preview for the Shortly URL shortening API site](./images/shortly-image.png)
 
 ### Links
 
@@ -62,9 +63,9 @@ Users should be able to:
 
 ### Useful resources
 
-- [Web Dev Simplified blog post on using the HTML template tag](shrtco.de/gEFcog) - Excellent post on using the HTML template tag to easily add dynamic content, whilst moving HTML out of Javascript.
+- [Web Dev Simplified blog post on using the HTML template tag](https://blog.webdevsimplified.com/2020-06/template-tag/) - Excellent post on using the HTML template tag to easily add dynamic content, whilst moving HTML out of Javascript.
 
-- [Video from James Q Quick on Tips for using Async/Await in Javascript](shrtco.de/vsMGgi) - This is a great video which helped me get to grips with async/await and promises. I'd recommend it to anyone still learning this concept.
+- [Video from James Q Quick on Tips for using Async/Await in Javascript](https://www.youtube.com/watch?v=_9vgd9XKlDQ&list=PLwoAe_hC2kPUZ0nsGQPy1symPVmJIz9CI&index=37) - This is a great video which helped me get to grips with async/await and promises. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
