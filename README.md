@@ -1,6 +1,6 @@
 # Shortly URL shorter
 
-Shorten any url using the Shortly URL shortening API site
+Shorten any URL using the Shortly URL shortening API site
 
 ![Preview for the Shortly URL shortening API site](./images/shortly-image.png)
 
