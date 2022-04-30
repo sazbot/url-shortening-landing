@@ -1,6 +1,6 @@
 # Shortly URL shorter
 
-Shorten any url using the Shortly URL shortening API site
+Shorten any URL using the Shortly URL shortening API site
 
 ![Preview for the Shortly URL shortening API site](./images/shortly-image.png)
 
@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/vanilla-url-shortener-api-landing-page-HyH__TqH5](https://www.frontendmentor.io/solutions/vanilla-url-shortener-api-landing-page-HyH__TqH5)
+- Live Site URL: [https://sazbot.github.io/url-shortening-landing/](https://sazbot.github.io/url-shortening-landing/)
 
 ## My process
 
