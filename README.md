@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/vanilla-url-shortener-api-landing-page-HyH__TqH5](https://www.frontendmentor.io/solutions/vanilla-url-shortener-api-landing-page-HyH__TqH5)
 - Live Site URL: [https://sazbot.github.io/url-shortening-landing/](https://sazbot.github.io/url-shortening-landing/)
 
 ## My process
