@@ -9,6 +9,10 @@ let baseURL = "https://api.shrtco.de/v2/shorten?url=";
 const SESSION_STORAGE_PREFIX = "URL_SHORTENING_LANDING";
 const LINKS_STORAGE_KEY = `${SESSION_STORAGE_PREFIX}-links`;
 
+// 1. push relevant error to error list
+// 2. render error from list
+const errorList = [];
+
 // add toggle functionality to nav bar
 openButton.addEventListener("click", () => {
   nav.classList.toggle("navigation-open");
