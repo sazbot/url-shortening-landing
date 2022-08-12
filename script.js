@@ -8,9 +8,6 @@ const shortenURLSection = document.querySelector("[data-section-shorten-url]");
 let baseURL = "https://api.shrtco.de/v2/shorten?url=";
 const SESSION_STORAGE_PREFIX = "URL_SHORTENING_LANDING";
 const LINKS_STORAGE_KEY = `${SESSION_STORAGE_PREFIX}-links`;
-
-// 1. push relevant error to error list
-// 2. render error from list
 const errorList = [];
 
 // add toggle functionality to nav bar
@@ -63,12 +60,14 @@ function validateInput(input) {
   if (regexp.test(input)) {
     return true;
   } else {
+    errorList.push("Please provide a valid url");
     displayError();
     return false;
   }
 }
 
 function displayError() {
+  errorMessage.innerText = errorList[0];
   errorMessage.classList.add("display-error");
 }
 
@@ -80,6 +79,7 @@ function clearError() {
 }
 
 async function fetchAPI(url) {
+  // errorList.push("Please provide a valid url");
   try {
     const res = await fetch(url);
     console.log(res.ok, res.status);
