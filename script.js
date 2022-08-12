@@ -1,5 +1,6 @@
 const openButton = document.querySelector("[data-open-nav]");
 const nav = document.querySelector("[data-nav]");
+const shortenURLButton = document.querySelector(".btn-shorten");
 const shortenURLForm = document.querySelector("[data-shorten-url]");
 const formInput = document.querySelector("[data-link-input]");
 const errorMessage = document.querySelector("[data-error-message]");
@@ -30,6 +31,7 @@ shortenURLForm.addEventListener("submit", (e) => {
 
   fetchAPI(fetchURL).then((data) => {
     renderLink(inputValue, data.result.short_link);
+    terminateLoader();
     saveLinks();
     resetForm();
   });
@@ -53,6 +55,20 @@ shortenURLSection.addEventListener("click", (e) => {
 });
 
 // Function definitions
+
+function initiateLoader() {
+  // shortenURLButton.innerText = "Shortening";
+  shortenURLButton.innerHTML = "<div class='loader'></div>";
+}
+
+function terminateLoader() {
+  shortenURLButton.innerText = "Shortened";
+  setTimeout(function () {
+    shortenURLButton.innerText = "Shorten it!";
+    shortenURLButton.style.backgroundColor = "hsl(180, 66%, 49%)";
+  }, 3000);
+}
+
 function validateInput(input) {
   let regexp =
     /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
@@ -80,6 +96,7 @@ function clearError() {
 }
 
 async function fetchAPI(url) {
+  initiateLoader();
   try {
     const res = await fetch(url);
     console.log(res.ok, res.status);

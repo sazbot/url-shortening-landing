@@ -240,7 +240,6 @@ h4 {
   color: var(--white);
   padding: 0.88em 2.5em;
   border-radius: 1.75em;
-  /* ADD transition */
 }
 
 .btn:hover,
@@ -255,6 +254,26 @@ h4 {
   padding: 10px 91px;
   font-size: var(--fs-18);
   line-height: var(--lh-27);
+}
+
+.loader {
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: white;
+  animation: spin 1s ease infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 /* ==================
