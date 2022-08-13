@@ -57,7 +57,6 @@ shortenURLSection.addEventListener("click", (e) => {
 // Function definitions
 
 function initiateLoader() {
-  // shortenURLButton.innerText = "Shortening";
   shortenURLButton.innerHTML = "<div class='loader'></div>";
 }
 
